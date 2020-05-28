@@ -1,1 +1,7 @@
-console.log('js ok');
+// console.log('js ok');
+import $ from 'jquery';
+
+$(document).ready(function () {
+    console.log('jquery ready');
+    
+});
