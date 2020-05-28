@@ -29,7 +29,7 @@ include __DIR__ . '/partials/templates/head.php'
                                   <td><?php echo $room['id']; ?></td>
                                   <td><?php echo $room['room_number']; ?></td>
                                   <td><?php echo $room['floor']; ?></td>
-                                  <td><a href="">Visualizza</a></td>
+                                  <td><a href="./show.php?id=<?php echo $room['id']; ?>"> Visualizza</a></td>
                                   <td>Modifica</td>
                                   <td>Cancella</td>
                               </tr>  
