@@ -1,7 +1,13 @@
 <?php 
 include __DIR__ . '/partials/home/server.php';
-include __DIR__ . '/partials/templates/head.php'
-?>
+include __DIR__ . '/partials/templates/head.php';
+
+//alert
+if ( !empty($_GET['canc']) ) { ?>
+    <div class="alert alert-success">
+        Stanza cancellata.
+    </div>
+<?php  } ?>
 
 <div class="container">
     <div class="row">
@@ -31,7 +37,12 @@ include __DIR__ . '/partials/templates/head.php'
                             <td><?php echo $room['floor']; ?></td>
                             <td><a href="./show.php?id=<?php echo $room['id']; ?>"> Visualizza</a></td>
                             <td>Modifica</td>
-                            <td>Cancella</td>
+                            <td>
+                                <form action="./partials/delete/server.php" method="POST">
+                                    <input type="hidden" name="id" value="<?php echo $room['id']; ?>">
+                                    <input class="btn btn-danger" type="submit" value="Cancella">
+                                </form>
+                            </td>
                         </tr>  
                     <?php }
                     }
