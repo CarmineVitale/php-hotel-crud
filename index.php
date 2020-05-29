@@ -35,8 +35,12 @@ if ( !empty($_GET['canc']) ) { ?>
                             <td><?php echo $room['id']; ?></td>
                             <td><?php echo $room['room_number']; ?></td>
                             <td><?php echo $room['floor']; ?></td>
-                            <td><a href="./show.php?id=<?php echo $room['id']; ?>"> Visualizza</a></td>
-                            <td>Modifica</td>
+                            <td>
+                                <a href="./show.php?id=<?php echo $room['id']; ?>"> Visualizza</a>
+                            </td>
+                            <td>
+                                <a href="./edit.php?id=<?php echo $room['id']; ?>">Modifica</a>
+                            </td>
                             <td>
                                 <form action="./partials/delete/server.php" method="POST">
                                     <input type="hidden" name="id" value="<?php echo $room['id']; ?>">

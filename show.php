@@ -1,7 +1,14 @@
 <?php 
 include __DIR__ . '/partials/show/server.php';
-include __DIR__ . '/partials/templates/head.php'
-?>
+include __DIR__ . '/partials/templates/head.php';
+
+//alert
+if ( !empty($_GET['id']) ) { ?>
+    <div class="alert alert-success">
+        Stanza modificata.
+    </div>
+<?php  } ?>
+
 
     <div class="container">
         <div class="row">
@@ -19,7 +26,7 @@ include __DIR__ . '/partials/templates/head.php'
                         <li class="list-group-item">Piano: <?php echo $room['floor']; ?></li>
                     </ul>
                 </div>
-                <a href="./">Torna indietro</a>
+                <a class="btn btn-primary" href=" <?php echo $base_path ?>/edit.php?id=<?php echo $room['id']; ?>">Modifica</a>
             </div>
         </div>
     </div>
