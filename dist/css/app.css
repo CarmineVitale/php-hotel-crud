@@ -10931,5 +10931,12 @@ a.text-dark:focus {
 body {
   color: black;
   background-color: salmon;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  flex-grow: 1;
 }
 

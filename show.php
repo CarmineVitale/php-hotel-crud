@@ -3,11 +3,11 @@ include __DIR__ . '/partials/show/server.php';
 include __DIR__ . '/partials/templates/head.php';
 
 //alert
-if ( !empty($_GET['id']) ) { ?>
-    <div class="alert alert-success">
+//if ( !empty($_GET['modif']) ) { ?>
+    <!-- <div class="alert alert-success">
         Stanza modificata.
-    </div>
-<?php  } ?>
+    </div> -->
+<?php // } ?>
 
 
     <div class="container">
@@ -24,9 +24,11 @@ if ( !empty($_GET['id']) ) { ?>
                         <li class="list-group-item">Numero camera: <?php echo $room['room_number']; ?></li>
                         <li class="list-group-item">Posti letto: <?php echo $room['beds']; ?></li>
                         <li class="list-group-item">Piano: <?php echo $room['floor']; ?></li>
+                        <li class="list-group-item">Creato: <?php echo $room['created_at']; ?></li>
+                        <li class="list-group-item">Modificato: <?php echo $room['updated_at']; ?></li>
                     </ul>
                 </div>
-                <a class="btn btn-primary" href=" <?php echo $base_path ?>/edit.php?id=<?php echo $room['id']; ?>">Modifica</a>
+                <a class="btn btn-primary mt-3" href=" <?php echo $base_path ?>/edit.php?id=<?php echo $room['id']; ?>">Modifica</a>
             </div>
         </div>
     </div>
